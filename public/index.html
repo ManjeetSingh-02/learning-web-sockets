@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Socket(socket.io)</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" placeholder="Type your data" name="Socket Data Input" id="socket-data-input">
+        <button id="socket-data-button">Send Data</button>
+    </div>
+    <div>
+        <ul id="socket-data-list">
+            <li>Hello</li>
+        </ul>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        // Connect to the Socket.IO server
+        const socket = io();
+
+        // html elments
+        const socketDataInput = document.getElementById('socket-data-input');
+        const socketDataButton = document.getElementById('socket-data-button');
+        const socketDataList = document.getElementById('socket-data-list');
+
+        // event listener to send data to the server
+        socketDataButton.addEventListener('click', () => {
+            socket.emit('client-data', socketDataInput.value);
+            socketDataInput.value = '';
+        })
+
+        // listen for data from the server
+        socket.on('server-data', (data) => {
+            // create a new list item
+            const li = document.createElement('li');
+
+            // set the text content to the received data
+            li.textContent = data;
+
+            // append to the data list
+            socketDataList.appendChild(li);
+        });
+
+    </script>
+</body>
+
+</html>

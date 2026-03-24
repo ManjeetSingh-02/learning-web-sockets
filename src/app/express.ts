@@ -10,7 +10,10 @@ export default function createApp(): Application {
   const application = express();
 
   // attach middlewares
-  application.use(express.json()).use(express.urlencoded({ extended: true }));
+  application
+    .use(express.json())
+    .use(express.urlencoded({ extended: true }))
+    .use(express.static('public'));
 
   // return the application
   return application;
