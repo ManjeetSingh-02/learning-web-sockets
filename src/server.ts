@@ -1,5 +1,5 @@
 // internal-imports
-import { createApp } from './app/index.js';
+import { createApp, io } from './app/index.js';
 import { env } from './core/index.js';
 
 // external-imports
@@ -23,6 +23,9 @@ async function startServer(): Promise<void> {
       })
       .listen(env.PORT)
   );
+
+  // attach socket.io to the server
+  io.attach(server);
 }
 
 // start the server
