@@ -13,6 +13,9 @@ importers:
       express:
         specifier: ^5.2.1
         version: 5.2.1
+      ioredis:
+        specifier: ^5.10.1
+        version: 5.10.1
       socket.io:
         specifier: ^4.8.3
         version: 4.8.3
@@ -271,6 +274,12 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@ioredis/commands@1.5.1':
+    resolution:
+      {
+        integrity: sha512-JH8ZL/ywcJyR9MmJ5BNqZllXNZQqQbnVZOqpPQqE1vHiFgAw4NHbvE0FOduNU8IX9babitBT46571OnPTT0Zcw==,
+      }
+
   '@socket.io/component-emitter@3.1.2':
     resolution:
       {
@@ -398,6 +407,13 @@ packages:
       }
     engines: { node: '>= 0.4' }
 
+  cluster-key-slot@1.1.2:
+    resolution:
+      {
+        integrity: sha512-RMr0FhtfXemyinomL4hrWcYJxmX6deFdCxpJzhDttxgO1+bcCnkk+9drydLVDmAMG7NE6aN/fl4F7ucU/90gAA==,
+      }
+    engines: { node: '>=0.10.0' }
+
   content-disposition@1.0.1:
     resolution:
       {
@@ -444,6 +460,13 @@ packages:
     peerDependenciesMeta:
       supports-color:
         optional: true
+
+  denque@2.1.0:
+    resolution:
+      {
+        integrity: sha512-HVQE3AAb/pxF8fQAoiqpvg9i3evqug3hoiwakOyZAwJm+6vZehbkYXZ0l4JxS+I3QxM97v5aaRNhj8v5oBhekw==,
+      }
+    engines: { node: '>=0.10' }
 
   depd@2.0.0:
     resolution:
@@ -638,6 +661,13 @@ packages:
         integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==,
       }
 
+  ioredis@5.10.1:
+    resolution:
+      {
+        integrity: sha512-HuEDBTI70aYdx1v6U97SbNx9F1+svQKBDo30o0b9fw055LMepzpOOd0Ccg9Q6tbqmBSJaMuY0fB7yw9/vjBYCA==,
+      }
+    engines: { node: '>=12.22.0' }
+
   ipaddr.js@1.9.1:
     resolution:
       {
@@ -649,6 +679,18 @@ packages:
     resolution:
       {
         integrity: sha512-hvpoI6korhJMnej285dSg6nu1+e6uxs7zG3BYAm5byqDsgJNWwxzM6z6iZiAgQR4TJ30JmBTOwqZUw3WlyH3AQ==,
+      }
+
+  lodash.defaults@4.2.0:
+    resolution:
+      {
+        integrity: sha512-qjxPLHd3r5DnsdGacqOMU6pb/avJzdh9tFX2ymgoZE27BmjXrNy/y4LoaiTeAb+O3gL8AfpJGtqfX/ae2leYYQ==,
+      }
+
+  lodash.isarguments@3.1.0:
+    resolution:
+      {
+        integrity: sha512-chi4NHZlZqZD18a0imDHnZPrDeBbTtVN7GXMwuGdRH9qotxAjYs3aVLKc7zNOG9eddR5Ksd8rvFEBc9SsggPpg==,
       }
 
   math-intrinsics@1.1.0:
@@ -796,6 +838,20 @@ packages:
       }
     engines: { node: '>= 0.10' }
 
+  redis-errors@1.2.0:
+    resolution:
+      {
+        integrity: sha512-1qny3OExCf0UvUV/5wpYKf2YwPcOqXzkwKKSmKHiE6ZMQs5heeE/c8eXK+PNllPvmjgAbfnsbpkGZWy8cBpn9w==,
+      }
+    engines: { node: '>=4' }
+
+  redis-parser@3.0.0:
+    resolution:
+      {
+        integrity: sha512-DJnGAeenTdpMEH6uAJRK/uiyEIH9WVsUmoLwzudwGJUwZPp80PDBWPHXSAGNPwNvIXAbe7MSUB1zQFugFml66A==,
+      }
+    engines: { node: '>=4' }
+
   resolve-pkg-maps@1.0.0:
     resolution:
       {
@@ -882,6 +938,12 @@ packages:
         integrity: sha512-2Dd78bqzzjE6KPkD5fHZmDAKRNe3J15q+YHDrIsy9WEkqttc7GY+kT9OBLSMaPbQaEd0x1BjcmtMtXkfpc+T5A==,
       }
     engines: { node: '>=10.2.0' }
+
+  standard-as-callback@2.1.0:
+    resolution:
+      {
+        integrity: sha512-qoRRSyROncaz1z0mvYqIE4lCd9p2R90i6GxW3uZv5ucSu8tU7B5HXUP1gG8pVZsYNVaXjk8ClXHPttLyxAL48A==,
+      }
 
   statuses@2.0.2:
     resolution:
@@ -1046,6 +1108,8 @@ snapshots:
   '@esbuild/win32-x64@0.27.4':
     optional: true
 
+  '@ioredis/commands@1.5.1': {}
+
   '@socket.io/component-emitter@3.1.2': {}
 
   '@types/body-parser@1.19.6':
@@ -1135,6 +1199,8 @@ snapshots:
       call-bind-apply-helpers: 1.0.2
       get-intrinsic: 1.3.0
 
+  cluster-key-slot@1.1.2: {}
+
   content-disposition@1.0.1: {}
 
   content-type@1.0.5: {}
@@ -1151,6 +1217,8 @@ snapshots:
   debug@4.4.3:
     dependencies:
       ms: 2.1.3
+
+  denque@2.1.0: {}
 
   depd@2.0.0: {}
 
@@ -1323,9 +1391,27 @@ snapshots:
 
   inherits@2.0.4: {}
 
+  ioredis@5.10.1:
+    dependencies:
+      '@ioredis/commands': 1.5.1
+      cluster-key-slot: 1.1.2
+      debug: 4.4.3
+      denque: 2.1.0
+      lodash.defaults: 4.2.0
+      lodash.isarguments: 3.1.0
+      redis-errors: 1.2.0
+      redis-parser: 3.0.0
+      standard-as-callback: 2.1.0
+    transitivePeerDependencies:
+      - supports-color
+
   ipaddr.js@1.9.1: {}
 
   is-promise@4.0.0: {}
+
+  lodash.defaults@4.2.0: {}
+
+  lodash.isarguments@3.1.0: {}
 
   math-intrinsics@1.1.0: {}
 
@@ -1386,6 +1472,12 @@ snapshots:
       http-errors: 2.0.1
       iconv-lite: 0.7.2
       unpipe: 1.0.0
+
+  redis-errors@1.2.0: {}
+
+  redis-parser@3.0.0:
+    dependencies:
+      redis-errors: 1.2.0
 
   resolve-pkg-maps@1.0.0: {}
 
@@ -1485,6 +1577,8 @@ snapshots:
       - bufferutil
       - supports-color
       - utf-8-validate
+
+  standard-as-callback@2.1.0: {}
 
   statuses@2.0.2: {}
 
