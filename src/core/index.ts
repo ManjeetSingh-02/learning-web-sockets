@@ -3,4 +3,4 @@ export { APP_CONFIG } from './config/constants.js';
 export { env } from './config/env.js';
 
 // redis
-export { redisClient } from './redis/client.js';
+export { redisPublisher, redisSubscriber } from './redis/client.js';
